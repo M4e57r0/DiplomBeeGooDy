@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Обучение парикмахеров и колористов</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <a class="a" href="#" style="text-align: center;">Контакты</a>
+                        <a class="a" href="#" style="text-align: center;">О нас</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 header-label">
+                BeeGooDy
+                <svg width="407" height="25" viewBox="0 0 407 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.452994 12.5L12 24.047L23.547 12.5L12 0.952994L0.452994 12.5ZM406.547 12.5L395 0.952994L383.453 12.5L395 24.047L406.547 12.5ZM12 14.5H395V10.5H12V14.5Z" fill="#898989" />
+                  </svg>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <a class="a" href="#" style="text-align: center;">Мастер-классы</a>
+                        <a class="a" href="#" style="text-align: center;">Отзывы</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- main -->
+     <main class="main">
+
+        <button id="scrollToTopBtn" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; display: none;">↑ Наверх</button>
+
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-6">
+                     <h1 class="title">Прокачайте свои навыки в мире парикмахерского искусства!</h1>
+                     <p>Хотите освоить современные техники стрижек, окрашивания и ухода за волосами? Наши курсы помогут вам стать востребованным специалистом и уверенно работать с клиентами. Опытные преподаватели, актуальная программа и максимум практики – всё, что нужно для успешного старта или профессионального роста.</p>
+                     <a href="#" class="btn btn-primary" role="button">Подробнее</a>
+             </div>
+         </div>
+
+         <div class="row">
+             <div class="col-md-6">
+                <img src="img/img1.jpg" alt="Image" class="img-fluid">
+                <h2>Что вас ждёт на курсах?</h2>
+                <ul>
+                    <li>Современные методики окрашивания и колористики</li>
+                    <li>Авторские техники стрижек и укладок</li>
+                    <li>Практика на моделях под руководством мастеров</li>
+                    <li>Сертификация и помощь в трудоустройстве</li>
+                </ul>
+                <a href="#" class="btn btn-primary" role="button">Подробнее</a>
+         </div>
+
+
+         <div class="col-md-6">
+            <img src="img/img2.jpg" alt="Image" class="img-fluid">
+            <h2>Что вас ждёт на курсах?</h2>
+            <ul>
+                <li>Современные методики окрашивания и колористики</li>
+                <li>Авторские техники стрижек и укладок</li>
+                <li>Практика на моделях под руководством мастеров</li>
+                <li>Сертификация и помощь в трудоустройстве</li>
+            </ul>
+                <a href="#" class="btn btn-primary" role="button">Подробнее</a>
+         </div>
+
+         <h2>Программа курса</h2>
+         <div class="accordion" id="courseProgram">
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+                         1. Структура волоса
+                     </button>
+                 </h2>
+                 <div id="item1" class="accordion-collapse collapse" data-bs-parent="#courseProgram">
+                     <div class="accordion-body">
+                         Изучение строения волоса, его слоёв и функции каждого из них.
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item2">
+                         2. Правильная диагностика волос
+                     </button>
+                 </h2>
+                 <div id="item2" class="accordion-collapse collapse" data-bs-parent="#courseProgram">
+                     <div class="accordion-body">
+                         Определение состояния волос. Когда можно делать завивку и в каких случаях нельзя.
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item3">
+                         3. Коклюшки и бигуди
+                     </button>
+                 </h2>
+                 <div id="item3" class="accordion-collapse collapse" data-bs-parent="#courseProgram">
+                     <div class="accordion-body">
+                         Разновидности коклюшек и бигуди. Какие использовать для разных типов завивок.
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item4">
+                         4. Классификация завивок
+                     </button>
+                 </h2>
+                 <div id="item4" class="accordion-collapse collapse" data-bs-parent="#courseProgram">
+                     <div class="accordion-body">
+                         Виды химических завивок, их особенности и применение.
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item5">
+                         5. Подбор состава по типу волос
+                     </button>
+                 </h2>
+                 <div id="item5" class="accordion-collapse collapse" data-bs-parent="#courseProgram">
+                     <div class="accordion-body">
+                         Как правильно подбирать состав для завивки в зависимости от структуры волос.
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item6">
+                         6. Техника выполнения завивки
+                     </button>
+                 </h2>
+                 <div id="item6" class="accordion-collapse collapse" data-bs-parent="#courseProgram">
+                     <div class="accordion-body">
+                         Подробный разбор шагов выполнения химической завивки.
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item7">
+                         7. Схемы накрутки
+                     </button>
+                 </h2>
+                 <div id="item7" class="accordion-collapse collapse" data-bs-parent="#courseProgram">
+                     <div class="accordion-body">
+                         Классическая, спиральная, "этажи" и другие схемы накрутки волос.
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item8">
+                         8. Прикорневая завивка
+                     </button>
+                 </h2>
+                 <div id="item8" class="accordion-collapse collapse" data-bs-parent="#courseProgram">
+                     <div class="accordion-body">
+                         Особенности техники прикорневой завивки для создания объёма.
+                     </div>
+                 </div>
+             </div>
+         
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item9">
+                         9. Уход за волосами после завивки
+                     </button>
+                 </h2>
+                 <div id="item9" class="accordion-collapse collapse" data-bs-parent="#courseProgram">
+                     <div class="accordion-body">
+                         Как ухаживать за волосами после химической завивки, чтобы сохранить их здоровье.
+                     </div>
+                 </div>
+             </div>
+         </div>
+         
+        
+
+     </main>
+
+     <!-- Footer -->
+      <footer class="footer">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-6">
+                     <h3>Контакты</h3>
+
+                     <!--Телега, инста, соц. сети-->
+
+                     <p>Email:  info@beegoo.ru</p>
+                 </div>
+                 
+                 <div class="col-md-6">
+                     <h3>О нас</h3>
+                     <p>Мы готовим профессиональных стилистов и колористов, вдохновлённых красотой и творчеством. На наших курсах вы освоите современные техники, получите практический опыт и научитесь воплощать самые смелые идеи клиентов.</p>
+                 </div>
+             </div>
+         </div>
+         
+      </footer>
+
+
+    <script src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/b3d6b6ab1f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
