@@ -32,3 +32,35 @@ links.forEach(function (link) {
         });
     });
 });
+
+
+// темная тема
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    function updateTheme() {
+        const isDark = body.classList.contains("dark-theme");
+        document.querySelectorAll(".accordion-item, .accordion-button, .accordion-body").forEach(el => {
+            el.style.backgroundColor = isDark ? "#1e1e1e" : "#F2F3F5";
+            el.style.color = isDark ? "#ffffff" : "#000000";
+        });
+    }
+
+    // Установить тему из localStorage
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-theme");
+        themeToggle.textContent = "☀️";
+        updateTheme();
+    }
+
+    themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+        localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
+        themeToggle.textContent = body.classList.contains("dark-theme") ? "☀️" : "🌙";
+        updateTheme();
+    });
+});
+
+

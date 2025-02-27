@@ -4,6 +4,12 @@
     --font-size-baseline: 28px !important;
     --font-size-headerBase: 32px !important;
     --font-size-label: 96px !important;
+    --background-color: #F2F3F5;
+    --text-color: #000;
+    --header-bg: #F2F3F5;
+    --footer-bg: #F2F3F5;
+    --link-color: #333;
+    --button-bg: #f00c91;
 }
 @font-face {
     font-family: 'Tulpen One';
@@ -26,8 +32,8 @@ body {
     font-family: var(--font-family) !important;
     font-weight: 400;
     font-size: var(--font-size-baseline);
-    color: #000;
-    background-color: #F2F3F5;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* Основные контейнеры */
@@ -36,6 +42,11 @@ body {
     width: 100%;
     padding: 0 32px;
     margin: 0 auto;
+}
+
+.container {
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* Заголовки */
@@ -52,11 +63,16 @@ body {
     margin: 0;
 }
 
+h1, h2, h3, p, li {
+    color: var(--text-color);
+}
+
+
 /* Ссылки */
 .a {
     font-family: var(--font-family) !important;
     font-size: var(--font-size-headerBase) !important;
-    color: #333;
+    color: var(--link-color);
     text-decoration: none;
     padding: 10px 15px;
     transition: color 0.3s ease-in-out;
@@ -93,14 +109,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #F2F3F5;
+    background-color: var(--header-bg);
 }
 
 .header-divider.zigzag {
-    background: linear-gradient(135deg, #f00c91 25%, transparent 25%) -50px 0,
-                linear-gradient(225deg, #f00c91 25%, transparent 25%) -50px 0,
-                linear-gradient(315deg, #f00c91 25%, transparent 25%),
-                linear-gradient(45deg, #f00c91 25%, transparent 25%);
+    background: linear-gradient(135deg, #f00c91 25%, var(--background-color) 25%) -50px 0,
+                linear-gradient(225deg, #f00c91 25%, var(--background-color) 25%) -50px 0,
+                linear-gradient(315deg, #f00c91 25%, var(--background-color) 25%),
+                linear-gradient(45deg, #f00c91 25%, var(--background-color) 25%);
     background-size: 20px 20px;
     height: 20px;
 }
@@ -112,8 +128,8 @@ body {
 .main {
     padding: 40px 0;
     text-align: center;
-    background-color: #F2F3F5;
-    color: #000;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,37 +137,76 @@ body {
     gap: 20px;
 }
 
+.dark-theme {
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+    --header-bg: #2b2b2b;
+    --footer-bg: #2b2b2b;
+    --link-color: #f00c91;
+    --button-bg: #c00a75;
+}
+
+.accordion {
+    background-color: var(--background-color);
+}
+
+.accordion-item {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.accordion-button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--button-bg);
+    color: white;
+}
+
+.accordion-body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
 /* Подвал */
 .footer {
-    padding-bottom: 40px;
+    padding: 20px 40px;
     text-align: center;
-    color: #000;
-    background-color: #F2F3F5;
+    background-color: var(--footer-bg);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-   
+}
+
+.footer .container {
+    background-color: var(--footer-bg);
 }
 
 /* Кнопки */
 .btn {
     border: none !important;
+    background-color: transparent !important;
 }
 .btn-primary {
-    background-color: #f00c91 !important;
-    color: white !important;
-    border: none;
+    color: #f00c91 !important;
+    border: 2px solid #f00c91 !important;
     padding: 12px 24px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 .btn-primary:hover {
-    background-color: #c00a75 !important;
+    background-color: var(--button-bg) !important;
+    color: white !important;
     transform: scale(1.05);
 }
 
@@ -163,7 +218,7 @@ body {
 }
 .col-md-8 .list-unstyled li {
     font-size: 16px;
-    color: #495057; /* Серый Bootstrap */
+    color:  var(--text-color); 
     margin-bottom: 10px;
     padding-left: 30px;
     position: relative;
